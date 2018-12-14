@@ -1,9 +1,20 @@
 import React, { Component } from 'react';
 import { render } from 'react-dom';
 
-class App extends React.Component {
+import Header from './components/Header/index';
+
+class App extends Component {
+  state = {
+    counter: 0,
+  };
+
   render() {
-    return <h1>Hello World</h1>;
+    return (
+      <div>
+        <Header />
+        <h1>{this.state.counter}</h1>
+      </div>
+    );
   }
 }
 
