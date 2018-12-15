@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import { render } from 'react-dom';
-
 import Header from './components/Header/index';
+import Post from './components/Post/index';
+import './styles.scss';
 
 class App extends Component {
   state = {
@@ -10,9 +11,8 @@ class App extends Component {
 
   render() {
     return (
-      <div>
+      <div className="App">
         <Header />
-        <h1>{this.state.counter}</h1>
       </div>
     );
   }
