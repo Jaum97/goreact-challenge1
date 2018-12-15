@@ -13,8 +13,6 @@ class App extends Component {
     return (
       <div className="App">
         <Header />
-        <h1>{this.state.counter}</h1>
-        <Post />
       </div>
     );
   }

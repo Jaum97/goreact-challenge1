@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import PostHeader from './PostHeader/index';
+// import PostHeader from './PostHeader/index';
 
 export default class Post extends Component {
   state = {
