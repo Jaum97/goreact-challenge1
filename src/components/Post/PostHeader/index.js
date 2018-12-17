@@ -1,33 +1,20 @@
-import React, { Component } from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
 
-export default class PostHeader extends Component {
-  state = {
-    userName,
-    postTime,
-    userAvatar,
-  };
+const PostHeader = props => (
+  <div className="post-header-container">
+    <img className="avatar" src={props.avatar} alt="avatar" />
+    <div className="data-container">
+      <strong>{props.name}</strong>
+      <span>{props.time}</span>
+    </div>
+  </div>
+);
 
-  static defaultProps = {
-    userName: 'Name',
-    postTime: Date(),
-    // userAvatar ",",
-  };
+PostHeader.propTypes = {
+  name: PropTypes.string.isRequired,
+  avatar: PropTypes.string.isRequired,
+  time: PropTypes.string.isRequired,
+};
 
-  static propTypes = {
-    userName: propTypes.String,
-    // userAvatar: propTypes.String,
-    postTime: propTypes.Date,
-  };
-
-  render() {
-    return (
-      <div className="post-header">
-        <img src="">avatar</img>
-        <br />
-        <strong>{this.state.userName}</strong>
-        <br />
-        <span>{this.state.postTime}</span>
-      </div>
-    );
-  }
-}
+export default PostHeader;
