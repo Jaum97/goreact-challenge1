@@ -1,28 +1,22 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+
 import PostHeader from './PostHeader/index';
-import './styles.scss';
 
 const Post = props => (
   <div className="post">
-    <PostHeader
-      userAvatar={props.data.userAvatar}
-      userName={props.data.userName}
-      postTime={props.data.postTime}
-    />
-    <p>{props.data.postBody}</p>
+    <PostHeader avatar={props.data.avatar} name={props.data.name} time={props.data.time} />
+    <p>{props.data.body}</p>
   </div>
 );
 
-// { userName, postTime, userAvatar, postBody } = props.data
-
 Post.propTypes = {
   data: PropTypes.shape({
-    userId: PropTypes.number.isRequired,
-    userName: PropTypes.string.isRequired,
-    userAvatar: PropTypes.string.isRequired,
-    postTime: PropTypes.string.isRequired,
-    postBody: PropTypes.string.isRequired,
+    id: PropTypes.number.isRequired,
+    name: PropTypes.string.isRequired,
+    avatar: PropTypes.string.isRequired,
+    time: PropTypes.string.isRequired,
+    body: PropTypes.string.isRequired,
   }).isRequired,
 };
 

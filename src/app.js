@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
 
+import { render } from 'react-dom';
 import Header from './components/Header/index';
 import Post from './components/Post/index';
+import './styles.scss';
 
 export default class App extends Component {
   state = {
@@ -37,3 +39,5 @@ export default class App extends Component {
     );
   }
 }
+
+render(<App />, document.getElementById('app'));
